@@ -4,7 +4,7 @@ require('dotenv').load();
 
 // Require keystone
 var keystone = require('keystone'),
-	handlebars = require('express-handlebars');
+    handlebars = require('express-handlebars');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -12,28 +12,28 @@ var keystone = require('keystone'),
 
 keystone.init({
 
-	'name': 'mKulesza-portfolio',
-	'brand': 'mKulesza-portfolio',
-	
-	'sass': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
-	'view engine': 'hbs',
-	
-	'custom engine': handlebars.create({
-		layoutsDir: 'templates/views/layouts',
-		partialsDir: 'templates/views/partials',
-		defaultLayout: 'default',
-		helpers: new require('./templates/views/helpers')(),
-		extname: '.hbs'
-	}).engine,
-	
-	'auto update': true,
-	'session': true,
-	'auth': true,
-	'user model': 'No',
-	'cookie secret': 'aXD]oiP/)0+Q*UId!wCOU:F2|um+#P8a1&gI{]1yPlJ5[?<HB,=l5W$->~*c6lny'
+  'name': 'mKulesza-portfolio',
+  'brand': 'mKulesza-portfolio',
+
+  'sass': 'public',
+  'static': 'public',
+  'favicon': 'public/favicon.ico',
+  'views': 'templates/views',
+  'view engine': 'hbs',
+
+  'custom engine': handlebars.create({
+    layoutsDir: 'templates/views/layouts',
+    partialsDir: 'templates/views/partials',
+    defaultLayout: 'default',
+    helpers: new require('./templates/views/helpers')(),
+    extname: '.hbs'
+  }).engine,
+
+  'auto update': true,
+  'session': true,
+  'auth': true,
+  'user model': 'No',
+  'cookie secret': 'aXD]oiP/)0+Q*UId!wCOU:F2|um+#P8a1&gI{]1yPlJ5[?<HB,=l5W$->~*c6lny'
 
 });
 
@@ -55,10 +55,10 @@ keystone.import('models');
 // for each request) should be added to ./routes/middleware.js
 
 keystone.set('locals', {
-	_: require('underscore'),
-	env: keystone.get('env'),
-	utils: keystone.utils,
-	editable: keystone.content.editable
+  _: require('underscore'),
+  env: keystone.get('env'),
+  utils: keystone.utils,
+  editable: keystone.content.editable
 });
 
 // Load your project's Routes
@@ -71,11 +71,11 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'nos': 'nos',
-    'header': 'header',
-    'videos': 'videos',
-    'listen': 'listen',
-    'soundCloud':  'soundCloud'
+  'nos': 'nos',
+  'header': 'header',
+  'videos': 'videos',
+  'listen': 'listen',
+  'soundCloud':  'soundCloud'
 });
 
 // Start Keystone to connect to your database and initialise the web server
