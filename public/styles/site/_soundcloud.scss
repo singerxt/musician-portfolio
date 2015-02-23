@@ -1,0 +1,45 @@
+.portfolio-soundcloud {
+  width: 100%;
+  position: relative;
+
+  .portfolio-soundcloud-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    width: 100%;
+    list-style: none;
+
+    a {
+      color: rgba(0,0,0,1);
+      padding: 10px;
+      text-transform: uppercase;
+    }
+
+    @include breakpoint(desktop) {
+      width: auto;
+      float: left;
+    }
+
+    &:hover {
+      background: rgba(0,160,227,1);
+      color: rgba(255,255,255,1);
+
+      a {
+        color: rgba(255,255,255,1);
+      }
+    }
+    
+    .active {
+      background: rgba(0,160,227,1);
+      color: rgba(255,255,255,1);
+    }
+  }
+}

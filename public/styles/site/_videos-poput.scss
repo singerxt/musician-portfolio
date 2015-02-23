@@ -1,0 +1,28 @@
+.video-poput {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin: 0 auto;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 300px;
+    margin-top: 200px;
+  }
+}

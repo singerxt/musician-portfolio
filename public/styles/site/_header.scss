@@ -1,0 +1,61 @@
+.portfolio-header {
+  text-align: center;
+  width: 100%;
+  display: table;
+  vertical-align: middle;
+  color: #fff;
+  overflow: hidden;
+
+  .portfolio-header-parallax {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .portfolio-header-title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: bold;
+    
+    @include breakpoint(tablet) {
+      font-size: 40px;
+    }
+    
+    @include breakpoint(desktop) {
+      font-size: 72px;
+    }
+  }
+  
+  .portfolio-header-subTitle {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 200;
+
+    @include breakpoint(tablet) {
+      font-size: 20px;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 24px;
+    }
+  }
+  
+  .portfolio-header-tags {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+    
+    @include breakpoint(tablet) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 28px;
+    }
+  }
+}

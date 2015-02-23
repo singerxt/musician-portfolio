@@ -1,0 +1,27 @@
+.portfolio-listen {
+  width: 100%;
+  padding: 100px 0;
+  
+  h1 {
+    width: 100%;
+    text-align: center;
+    color: rgba(0,160,227,1);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+    @include breakpoint(tablet) {
+      font-size: 26px;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 36px;
+    }
+  }
+  
+  p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

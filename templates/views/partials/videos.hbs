@@ -1,0 +1,32 @@
+<div class="portfolio-videos">
+  <h1>watch</h1>
+
+  <div class="controls">
+    <div class="wrapper">
+      <div class="left">
+        &lt;
+      </div>
+      <div class="right">
+        &gt;
+      </div>
+    </div>
+  </div>
+
+  <div class="videos-list">
+    <div class="videos-track">
+      {{#each videos}}
+        <div class="video">
+          <div class="overlay">
+            <p>{{this.title}}</p>
+          </div>
+          <div class="video-thumbnail">
+            <a href="{{this.url}}">
+              <img src="{{this.image.url}}">
+            </a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+</div>
