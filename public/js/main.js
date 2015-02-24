@@ -88,8 +88,10 @@
     },
 
     bindPoputClickEvent: function () {
+      var that = this;
       this.config.poput.on('click', function () {
         this.style.display = 'none';
+        that.config.iframe.attr('src', '');
       });
     },
 

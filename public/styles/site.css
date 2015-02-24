@@ -5,7 +5,10 @@ body {
   padding: 0; }
 
 a {
+  color: black;
   text-decoration: none; }
+  a:hover {
+    color: #00a0e3; }
 
 .portfolio-header {
   text-align: center;
@@ -145,7 +148,8 @@ a {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
-  display: none; }
+  display: none;
+  z-index: 4; }
   .video-poput .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -213,3 +217,28 @@ a {
     .portfolio-soundcloud li .active {
       background: #00a0e3;
       color: white; }
+
+.portfolio-contact {
+  width: 100%;
+  position: relative;
+  padding: 100px 0; }
+  .portfolio-contact h1 {
+    width: 100%;
+    text-align: center;
+    color: #00a0e3;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase; }
+    @media (min-width: 640px) {
+      .portfolio-contact h1 {
+        font-size: 26px; } }
+    @media (min-width: 1025px) {
+      .portfolio-contact h1 {
+        font-size: 36px; } }
+  .portfolio-contact p {
+    width: auto;
+    text-align: center;
+    padding: 20px; }
+    .portfolio-contact p a {
+      font-size: 24px;
+      font-weight: lighter; }

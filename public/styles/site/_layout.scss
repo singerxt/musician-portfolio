@@ -6,5 +6,10 @@ body {
 }
 
 a {
+  color: rgba(0,0,0,1);
   text-decoration: none;
+
+  &:hover {
+    color: rgba(0,160,227,1);
+  }
 }
