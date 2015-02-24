@@ -279,3 +279,15 @@ a {
       margin: 0 auto;
       display: table-cell;
       vertical-align: middle; }
+  .portfolio-contact .author {
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 0;
+    margin: 0;
+    font-weight: 300; }
+    .portfolio-contact .author .fa-heart {
+      color: #ff3867; }
+    .portfolio-contact .author a {
+      font-size: 14px; }

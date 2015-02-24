@@ -1,7 +1,11 @@
 /* globals jQuery */
 
 (function($) {
-  
+  /*
+   * Grettings 
+   */
+
+  console.log('Hello! Do you want website like this? You are lucky this website is completly free checkout my github repo https://github.com/singerxt/musician-portfolio');
   /*
    * Scripts for header
    */
