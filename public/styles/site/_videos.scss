@@ -32,6 +32,11 @@
     .left, .right {
       display: inline-block;
       width: 49%;
+      
+      a {
+        font-size: 50px;
+        font-weight: 300;
+      }
     }
   }
 

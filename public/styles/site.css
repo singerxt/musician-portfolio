@@ -6,7 +6,12 @@ body {
 
 a {
   color: black;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  transition: color 0.2s linear; }
   a:hover {
     color: #00a0e3; }
 
@@ -83,6 +88,9 @@ a {
     .portfolio-videos .controls .left, .portfolio-videos .controls .right {
       display: inline-block;
       width: 49%; }
+      .portfolio-videos .controls .left a, .portfolio-videos .controls .right a {
+        font-size: 50px;
+        font-weight: 300; }
   .portfolio-videos .videos-list {
     width: 100%;
     overflow: hidden; }
@@ -190,7 +198,8 @@ a {
 
 .portfolio-soundcloud {
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding-bottom: 100px; }
   .portfolio-soundcloud .portfolio-soundcloud-wrapper {
     width: 80%;
     margin: 0 auto; }
@@ -200,7 +209,8 @@ a {
     margin: 0; }
   .portfolio-soundcloud li {
     width: 100%;
-    list-style: none; }
+    list-style: none;
+    text-align: center; }
     .portfolio-soundcloud li a {
       color: black;
       padding: 10px;
@@ -214,14 +224,16 @@ a {
       color: white; }
       .portfolio-soundcloud li:hover a {
         color: white; }
-    .portfolio-soundcloud li .active {
-      background: #00a0e3;
+  .portfolio-soundcloud li.active {
+    background: #00a0e3; }
+    .portfolio-soundcloud li.active a {
       color: white; }
 
 .portfolio-contact {
   width: 100%;
   position: relative;
-  padding: 100px 0; }
+  padding-top: 50px;
+  background-color: white; }
   .portfolio-contact h1 {
     width: 100%;
     text-align: center;
@@ -242,3 +254,28 @@ a {
     .portfolio-contact p a {
       font-size: 24px;
       font-weight: lighter; }
+  .portfolio-contact .portfolio-social-wrapper {
+    display: table;
+    margin: 0 auto; }
+    .portfolio-contact .portfolio-social-wrapper ul {
+      width: auto;
+      list-style: none;
+      padding: 0; }
+      .portfolio-contact .portfolio-social-wrapper ul li {
+        display: inline;
+        font-size: 24px;
+        margin: 5px; }
+  .portfolio-contact .portfolio-go-top {
+    height: 100px;
+    background: #CCCCCC; }
+    .portfolio-contact .portfolio-go-top .portfolio-go-top-wrapper {
+      display: table;
+      height: 100%;
+      width: 100%; }
+    .portfolio-contact .portfolio-go-top a {
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      margin: 0 auto;
+      display: table-cell;
+      vertical-align: middle; }

@@ -1,7 +1,8 @@
 .portfolio-contact {
   width: 100%;
   position: relative;
-  padding: 100px 0;
+  padding-top: 50px;
+  background-color: rgba(255,255,255,1);
   
   h1 {
     width: 100%;
@@ -28,6 +29,43 @@
     a {
       font-size: 24px;
       font-weight: lighter;
+    }
+  }
+  
+  .portfolio-social-wrapper {
+    display: table;
+	margin: 0 auto;
+    
+    ul {
+      width: auto;
+      list-style: none;
+      padding: 0;
+      
+      li {
+        display: inline;
+        font-size: 24px;
+        margin: 5px;
+      }
+    }
+  }
+  
+  .portfolio-go-top {
+    height: 100px;
+    background: #CCCCCC;
+    
+    .portfolio-go-top-wrapper {
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+    
+    a {
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      margin: 0 auto;
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 }

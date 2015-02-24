@@ -125,7 +125,7 @@
     },
 
     clearActive: function () {
-      this.config.scLink.removeClass('active');
+      this.config.scLink.parent().removeClass('active');
     },
 
     bindClickEvent: function () {
@@ -134,7 +134,7 @@
       this.config.scLink.on('click', function (e) {
         e.preventDefault();
         that.clearActive();
-        this.className = 'active';
+        $(this).parent().addClass('active')
         src = this.getAttribute('href');
         that.config.iframe.attr('src', src);
       });

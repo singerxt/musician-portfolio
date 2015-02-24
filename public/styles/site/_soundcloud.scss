@@ -1,6 +1,7 @@
 .portfolio-soundcloud {
   width: 100%;
   position: relative;
+  padding-bottom: 100px;
 
   .portfolio-soundcloud-wrapper {
     width: 80%;
@@ -16,6 +17,7 @@
   li {
     width: 100%;
     list-style: none;
+    text-align: center;
 
     a {
       color: rgba(0,0,0,1);
@@ -36,9 +38,12 @@
         color: rgba(255,255,255,1);
       }
     }
-    
-    .active {
-      background: rgba(0,160,227,1);
+  }
+
+  li.active {
+    background: rgba(0,160,227,1);
+
+    a {
       color: rgba(255,255,255,1);
     }
   }
