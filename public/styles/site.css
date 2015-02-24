@@ -15,6 +15,21 @@ a {
   a:hover {
     color: #00a0e3; }
 
+h1 {
+  width: 100%;
+  text-align: center;
+  color: #00a0e3;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0; }
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 26px; } }
+  @media (min-width: 1025px) {
+    h1 {
+      font-size: 36px; } }
+
 .portfolio-header {
   text-align: center;
   width: 100%;
@@ -22,6 +37,8 @@ a {
   vertical-align: middle;
   color: #fff;
   overflow: hidden; }
+  .portfolio-header h1 {
+    color: #ffffff; }
   .portfolio-header .portfolio-header-parallax {
     display: table-cell;
     vertical-align: middle; }
@@ -65,19 +82,6 @@ a {
 .portfolio-videos {
   width: 100%;
   padding-top: 100px; }
-  .portfolio-videos h1 {
-    width: 100%;
-    text-align: center;
-    color: #00a0e3;
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: uppercase; }
-    @media (min-width: 640px) {
-      .portfolio-videos h1 {
-        font-size: 26px; } }
-    @media (min-width: 1025px) {
-      .portfolio-videos h1 {
-        font-size: 36px; } }
   .portfolio-videos .controls {
     width: 100%;
     position: relative;
@@ -178,19 +182,6 @@ a {
 .portfolio-listen {
   width: 100%;
   padding: 100px 0; }
-  .portfolio-listen h1 {
-    width: 100%;
-    text-align: center;
-    color: #00a0e3;
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: uppercase; }
-    @media (min-width: 640px) {
-      .portfolio-listen h1 {
-        font-size: 26px; } }
-    @media (min-width: 1025px) {
-      .portfolio-listen h1 {
-        font-size: 36px; } }
   .portfolio-listen p {
     width: 80%;
     margin: 0 auto;
@@ -234,19 +225,6 @@ a {
   position: relative;
   padding-top: 50px;
   background-color: white; }
-  .portfolio-contact h1 {
-    width: 100%;
-    text-align: center;
-    color: #00a0e3;
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: uppercase; }
-    @media (min-width: 640px) {
-      .portfolio-contact h1 {
-        font-size: 26px; } }
-    @media (min-width: 1025px) {
-      .portfolio-contact h1 {
-        font-size: 36px; } }
   .portfolio-contact p {
     width: auto;
     text-align: center;
@@ -266,6 +244,7 @@ a {
         font-size: 24px;
         margin: 5px; }
   .portfolio-contact .portfolio-go-top {
+    margin-top: 40px;
     height: 100px;
     background: #CCCCCC; }
     .portfolio-contact .portfolio-go-top .portfolio-go-top-wrapper {

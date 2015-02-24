@@ -3,23 +3,6 @@
   position: relative;
   padding-top: 50px;
   background-color: rgba(255,255,255,1);
-  
-  h1 {
-    width: 100%;
-    text-align: center;
-    color: rgba(0,160,227,1);
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: uppercase;
-
-    @include breakpoint(tablet) {
-      font-size: 26px;
-    }
-
-    @include breakpoint(desktop) {
-      font-size: 36px;
-    }
-  }
 
   p {
     width: auto;
@@ -50,6 +33,7 @@
   }
   
   .portfolio-go-top {
+    margin-top: 40px;
     height: 100px;
     background: #CCCCCC;
     
@@ -81,6 +65,7 @@
     .fa-heart {
       color: #ff3867;
     }
+
     a {
       font-size: 14px
     }
