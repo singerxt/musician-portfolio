@@ -36,6 +36,7 @@
 
     setHeight: function () {
       this.config.header.height(window.innerHeight);
+      this.config.header.css('background', 'initial');
     },
 
     bindResizeEvent: function () {
@@ -84,7 +85,8 @@
       var iframeSrc,
           that = this;
 
-      this.config.video.on('click', function () {
+      this.config.video.on('click', function (e) {
+        e.preventDefault();
         iframeSrc = $(this).find('a').attr('href');
         that.config.iframe.attr('src', iframeSrc);
         that.config.poput.show();
@@ -128,6 +130,7 @@
       
       $window.on('resize', function () {
         that.setTrackWidth();
+        that.goToSlide(0);
       });
     },
 
@@ -206,6 +209,7 @@
   var soundCloud = {
     initFirst: function () {
       this.config.scLink.first().click();
+      this.config.iframe.attr('height', 600);
     },
 
     clearActive: function () {

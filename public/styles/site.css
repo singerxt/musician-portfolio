@@ -36,7 +36,10 @@ h1 {
   display: table;
   vertical-align: middle;
   color: #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 700px;
+  background: url('../images/backgroundvideo/kulesza_800.jpg');
+  background-size: 100%; }
   .portfolio-header h1 {
     color: #ffffff; }
   .portfolio-header .portfolio-header-parallax {
@@ -155,10 +158,11 @@ h1 {
           transition: all 0.2s ease-in-out; }
       .portfolio-videos .videos-list .video:hover .overlay {
         background: rgba(0, 160, 227, 0.8);
-        color: white;
         opacity: 1; }
         .portfolio-videos .videos-list .video:hover .overlay p {
           transform: translate3d(0, 40px, 0); }
+          .portfolio-videos .videos-list .video:hover .overlay p a {
+            color: white; }
 
 .video-poput {
   width: 100%;
