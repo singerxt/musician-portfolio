@@ -150,17 +150,26 @@ h1 {
         .portfolio-videos .videos-list .video .overlay p {
           text-align: center;
           font-size: 20px;
-          padding: 15px;
-          transform: translate3d(0, 10px, 0);
+          padding: 0 15px;
+          height: 100%;
+          width: auto;
+          display: table;
+          transform: translate3d(0, -50px, 0);
           -webkit-transition: all 0.1s ease-in-out;
           -moz-transition: all 0.2s ease-in-out;
           -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out; }
+          transition: all 0.2s ease-in-out;
+          margin: 0; }
+          .portfolio-videos .videos-list .video .overlay p a {
+            width: 100%;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle; }
       .portfolio-videos .videos-list .video:hover .overlay {
         background: rgba(0, 160, 227, 0.8);
         opacity: 1; }
         .portfolio-videos .videos-list .video:hover .overlay p {
-          transform: translate3d(0, 70px, 0); }
+          transform: translate3d(0, 0, 0); }
           .portfolio-videos .videos-list .video:hover .overlay p a {
             color: white; }
 
