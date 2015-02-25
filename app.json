@@ -1,0 +1,7 @@
+{
+  "name": "Musician Portfoloo Demo",
+  "description": "Simple website with CMS for musicians",
+  "repository": "https://github.com/singerxt/musician-portfolio",
+  "logo": "https://github.com/singerxt/musician-portfolio",
+  "keywords": ["node", "express", "static", "keystone", "music", "portfolio"]
+}
