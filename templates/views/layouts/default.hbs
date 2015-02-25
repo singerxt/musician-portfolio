@@ -30,13 +30,26 @@
     {{> soundcloud}}
     {{> contact}}
     {{!--
-    //- jQuery 1.11.1 is included by default, and required by both Bootstrap
-    //- and the KeystoneJS Content Editor. If you are not targeting IE8,
-    //- you can upgrade to 2.1.1 (also bundled) for better performance.
+      //- jQuery 1.11.1 is included by default, and required by both Bootstrap
+      //- and the KeystoneJS Content Editor. If you are not targeting IE8,
+      //- you can upgrade to 2.1.1 (also bundled) for better performance.
     --}}
     <script src="/js/lib/jquery/jquery-1.11.1.min.js"></script>
     <script src="/js/lib/jquery.vide.js"></script>
     <script src="/js/main.js"></script>
-    {{{isAdminEditorJS user}}}
+    {{!-- 
+      //- For old browsers
+      //- https://browser-update.org/#install
+    --}}
+    <script> 
+      var $buoop = {c:2}; 
+      function $buo_f(){ 
+       var e = document.createElement("script"); 
+       e.src = "//browser-update.org/update.js"; 
+       document.body.appendChild(e);
+      };
+      try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+      catch(e){window.attachEvent("onload", $buo_f)}
+    </script>
   </body>
 </html>

@@ -160,7 +160,7 @@ h1 {
         background: rgba(0, 160, 227, 0.8);
         opacity: 1; }
         .portfolio-videos .videos-list .video:hover .overlay p {
-          transform: translate3d(0, 40px, 0); }
+          transform: translate3d(0, 70px, 0); }
           .portfolio-videos .videos-list .video:hover .overlay p a {
             color: white; }
 

@@ -71,16 +71,16 @@
   };
 
   header.init();
-  
+
   /*
    * END scripts header
    */
-  
+
   /*
    * Videos configuration
    */
   var videos = {
-    
+
     bindVideoClickEvent: function () {
       var iframeSrc,
           that = this;
@@ -123,11 +123,11 @@
         }
       }
     },
-    
+
     bindResizeEvent: function () {
       var $window = $(window),
           that = this;
-      
+
       $window.on('resize', function () {
         that.setTrackWidth();
         that.goToSlide(0);
@@ -137,13 +137,19 @@
     setTrackWidth: function () {
       var howMuchSlides = this.config.video.length,
           divider = this.config.slidesToShow(),
-          slideWidth = parseInt(window.innerWidth / divider,10);
-      
+          slideWidth = parseInt(window.innerWidth / divider,10),
+          trackHeight = $('.video').height();
+
       this.config.video.css('width', slideWidth);
-      this.config.track.css('width', slideWidth * howMuchSlides);
+      this.config.track.css({
+        'width': slideWidth * howMuchSlides,
+        'height': trackHeight,
+        'overflow': 'hidden'
+      });
+
       this.setWayPoints(slideWidth);
     },
-    
+
     setWayPoints: function (slideWidth) {
       var total = 0;
       this.config.wayPoints = [];
@@ -153,7 +159,7 @@
         this.config.wayPoints.push(total - slideWidth);
       }
     },
-    
+
     goToSlide: function (index) {
       var waypoint = this.config.wayPoints[index];
       this.config.currentIndex = index;
@@ -163,7 +169,7 @@
         'transform': 'translate3d(-' + waypoint + 'px,0,0)'
       });
     },
-    
+
     goRight: function () {
       var maxIndex = this.config.wayPoints.length - this.config.slidesToShow(),
           index = (this.config.currentIndex + 1 > maxIndex) ? maxIndex : this.config.currentIndex + 1;
@@ -174,7 +180,7 @@
       var index = (this.config.currentIndex <= 0) ? this.config.currentIndex : this.config.currentIndex - 1;
       this.goToSlide(index);
     },
-    
+
     bindControls: function () {
       var that = this;
       this.config.controls.on('click', function (e) {
@@ -192,7 +198,7 @@
       this.setTrackWidth();
       this.bindControls();
     },
-    
+
     init: function() {
       this.bindVideoClickEvent();
       this.bindPoputClickEvent();
@@ -201,11 +207,11 @@
   };
 
   videos.init();
-  
+
   /*
    * SoundCloud configuration
    */
-  
+
   var soundCloud = {
     initFirst: function () {
       this.config.scLink.first().click();
@@ -238,6 +244,6 @@
       this.initFirst();
     }
   };
-  
+
   soundCloud.init();
 })(jQuery);
