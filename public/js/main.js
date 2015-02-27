@@ -81,6 +81,16 @@
         that.config.poput.show();
       });
     },
+    
+    bindEscClick: function () {
+      var that = this;
+
+      document.onkeyup = function (e) {
+        if(e.keyCode === 27) {
+          that.config.poput.click();
+        }
+      };
+    },
 
     bindPoputClickEvent: function () {
       var that = this;
@@ -207,6 +217,7 @@
     init: function() {
       this.bindVideoClickEvent();
       this.bindPoputClickEvent();
+      this.bindEscClick();
       this.initRotator();
     }
   };
