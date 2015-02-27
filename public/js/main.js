@@ -13,19 +13,13 @@
   var header = {
 
     bindScrollEvent: function () {
-      var $window = $(window),
-          that = this;
-
-      $window.on('scroll', function () {
-        that.parallaxEffect();
-      });
+      window.onscroll = this.parallaxEffect.bind(this);
     },
 
     parallaxEffect: function () {
       var posY,
           parallaxEffect = 0.45,
           $window = $(window);
-
       posY = $window.scrollTop() * parallaxEffect;
       this.config.headerParallax.css({
         '-webkit-transform': 'translate3d(0,' + posY  + 'px,0)',
@@ -40,12 +34,7 @@
     },
 
     bindResizeEvent: function () {
-      var $window = $(window),
-          that = this;
-
-      $window.on('resize', function () {
-        that.setHeight();
-      });
+      window.onresize = this.setHeight.bind(this);
     },
 
     runVideo: function () {
@@ -228,7 +217,7 @@
       this.config.scLink.on('click', function (e) {
         e.preventDefault();
         that.clearActive();
-        $(this).parent().addClass('active');
+        this.parentNode.className = 'active';
         src = this.getAttribute('href');
         that.config.iframe.attr('src', src);
       });

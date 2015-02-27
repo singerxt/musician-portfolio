@@ -16,7 +16,6 @@ gulp.task('lint', function(){
   gulp.src(paths.src)
   .pipe(jshint())
   .pipe(jshint.reporter(jshintReporter));
-
 });
 
 // gulp watcher for lint

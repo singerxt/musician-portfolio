@@ -16,6 +16,7 @@ keystone.init({
   'brand': 'mKulesza-portfolio',
 
   'sass': 'public',
+  'sass options': {outputStyle: 'compressed'},
   'static': 'public',
   'favicon': 'public/favicon.ico',
   'views': 'templates/views',
