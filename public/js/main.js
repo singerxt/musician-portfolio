@@ -116,14 +116,15 @@
     bindTouchEvent: function () {
       var that= this;
 
-      this.config.videoContainer.parent().swipe({
+      this.config.videoContainer.swipe({
         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
           if(direction === 'right') {
-            that.goRight();
-          } else {
             that.goLeft();
+          } else {
+            that.goRight();
           }
-        }
+        },
+        excludedElements: ''
       });
     },
 
