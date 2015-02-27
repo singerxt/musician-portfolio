@@ -113,6 +113,20 @@
       }
     },
 
+    bindTouchEvent: function () {
+      var that= this;
+
+      this.config.videoContainer.parent().swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+          if(direction === 'right') {
+            that.goRight();
+          } else {
+            that.goLeft();
+          }
+        }
+      });
+    },
+
     bindResizeEvent: function () {
       var $window = $(window),
           that = this;
@@ -186,6 +200,7 @@
       this.bindResizeEvent();
       this.setTrackWidth();
       this.bindControls();
+      this.bindTouchEvent();
     },
 
     init: function() {
