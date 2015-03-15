@@ -136,11 +136,6 @@
         var onLoad = function() {
             callback(this.src);
         };
-
-        $("<img src='" + path + ".gif'>").load(onLoad);
-        $("<img src='" + path + ".jpg'>").load(onLoad);
-        $("<img src='" + path + ".jpeg'>").load(onLoad);
-        $("<img src='" + path + ".png'>").load(onLoad);
     }
 
     /**
