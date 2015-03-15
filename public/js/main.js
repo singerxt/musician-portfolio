@@ -10,7 +10,27 @@
   var navigation = {
     config: {
       $nav: $('.portfolio-navigation'),
-      $logo: $('.portfolio-navigation .logo')
+      $logo: $('.portfolio-navigation .logo'),
+      $items: $('.portfolio-navigation li a'),
+      $sections: {
+        home: $('.portfolio-header'),
+        watch: $('.portfolio-videos'),
+        listen: $('.portfolio-listen'),
+        contact: $('.portfolio-contact')
+      }
+    },
+
+    bindClickEvent: function () {
+      var $window = $(window),
+          that = this,
+          $body = $('html,body'),
+          posY;
+
+      this.config.$items.on('click', function (e) {
+        e.preventDefault();
+        posY = that.config.$sections[this.dataset.section].position().top;
+        $body.animate({scrollTop:posY}, '500');
+      });
     },
 
     bindScrollEvent: function () {
@@ -23,7 +43,7 @@
         } else {
           that.config.$nav.addClass('active');
         }
-        
+
         if(this.scrollY > window.innerHeight * 0.5) {
           that.config.$logo.addClass('show');
         } else {
@@ -34,6 +54,7 @@
 
     init: function () {
       this.bindScrollEvent();
+      this.bindClickEvent();
     }
   };
 
@@ -114,7 +135,7 @@
         that.config.poput.show();
       });
     },
-    
+
     bindEscClick: function () {
       var that = this;
 
