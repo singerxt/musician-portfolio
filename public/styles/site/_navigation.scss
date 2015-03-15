@@ -1,5 +1,5 @@
 .portfolio-navigation {
-  height: 100px;
+  height: 85px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -10,6 +10,7 @@
   display: none;
   font-size: 30px;
   color: #ebecec;
+  text-transform: uppercase;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -21,7 +22,7 @@
   }
   
   &.active {
-    background: #ebecec;
+    background: #fff;
     color: #000000;
     
     a {
@@ -41,10 +42,10 @@
 
   .logo {
     float: left;
-    width: 200px;
+    width: 350px;
     margin: 0;
     height: 100%;
-    line-height: 3.7;
+    line-height: 3;
     opacity: 0;
     -webkit-filter: grayscale(0.5) blur(5px);
     -webkit-transition: all 0.2s linear;
@@ -62,6 +63,7 @@
   ul {
     list-style-type: none;
     float: right;
+    margin: 17px 0 0 0;
     
     li {
       display: inline-block;
