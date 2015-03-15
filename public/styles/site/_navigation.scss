@@ -47,6 +47,7 @@
     height: 100%;
     line-height: 3;
     opacity: 0;
+    font-weight: bold;
     transform: translateY(-50px);
     -webkit-transform: translateY(-50px);
     -moz-transform: translateY(-50px);
@@ -79,7 +80,6 @@
       display: inline-block;
       font-size: 15px;
       padding: 12px;
-      font-weight: bold;
     }
     
     li:last-child {
