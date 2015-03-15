@@ -11,17 +11,13 @@
     <link href="/styles/site.css" rel="stylesheet">
   </head>
   <body>
+      {{> navigation}}
       {{> header}}
       {{> videos}}
       {{> videoPopup}}
       {{> listen}}
       {{> soundcloud}}
       {{> contact}}
-    {{!--
-      //- jQuery 1.11.1 is included by default, and required by both Bootstrap
-      //- and the KeystoneJS Content Editor. If you are not targeting IE8,
-      //- you can upgrade to 2.1.1 (also bundled) for better performance.
-    --}}
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
     <script src="/js/lib/jquery.vide.js"></script>

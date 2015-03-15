@@ -1,0 +1,76 @@
+.portfolio-navigation {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0);
+  border-bottom: 1px solid #cccccc;
+  z-index: 100000;
+  display: none;
+  font-size: 30px;
+  color: #ebecec;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  
+  @include breakpoint(desktop) {
+    display: block;
+  }
+  
+  &.active {
+    background: #ebecec;
+    color: #000000;
+    
+    a {
+      color: #000000;
+    }
+  }
+  
+  a {
+    color: #ebecec;
+  }
+  
+  .container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    float: left;
+    width: 200px;
+    margin: 0;
+    height: 100%;
+    line-height: 3.7;
+    opacity: 0;
+    -webkit-filter: grayscale(0.5) blur(5px);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    
+    &.show {
+      opacity: 1;
+      -webkit-filter: grayscale(0) blur(0);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    float: right;
+    
+    li {
+      display: inline-block;
+      font-size: 15px;
+      padding: 12px;
+    }
+    
+    li:last-child {
+      padding-right: 0;
+    }
+  }
+}

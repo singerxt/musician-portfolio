@@ -6,6 +6,39 @@
    */
 
   console.log('Hello! Do you want website like this? You are lucky this website is completly free checkout my github repo https://github.com/singerxt/musician-portfolio');
+
+  var navigation = {
+    config: {
+      $nav: $('.portfolio-navigation'),
+      $logo: $('.portfolio-navigation .logo')
+    },
+
+    bindScrollEvent: function () {
+      var $window = $(window),
+          that = this;
+
+      $window.on('scroll', function () {
+        if(this.scrollY === 0) {
+          that.config.$nav.removeClass('active');
+        } else {
+          that.config.$nav.addClass('active');
+        }
+        
+        if(this.scrollY > window.innerHeight * 0.5) {
+          that.config.$logo.addClass('show');
+        } else {
+          that.config.$logo.removeClass('show');
+        }
+      });
+    },
+
+    init: function () {
+      this.bindScrollEvent();
+    }
+  };
+
+  navigation.init();
+
   /*
    * Scripts for header
    */
