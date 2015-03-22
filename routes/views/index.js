@@ -66,6 +66,18 @@ exports = module.exports = function(req, res) {
       next();
     });
   });
+  
+  view.on('init', function (next) {
+    keystone.list('footer').model.find().exec(function (err,results) {
+      if (err || !results.length) {
+        return next(err);
+      }
+
+      locals.footer = results[0];
+      console.log(results[0]);
+      next();
+    });
+  });
 
   // Render the view
   view.render('index');

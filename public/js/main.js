@@ -1,4 +1,5 @@
 /* globals jQuery */
+'use strict';
 
 (function($) {
   /*
@@ -21,8 +22,7 @@
     },
 
     bindClickEvent: function () {
-      var $window = $(window),
-          that = this,
+      var that = this,
           $body = $('html,body'),
           posY;
 

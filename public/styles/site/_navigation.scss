@@ -5,7 +5,6 @@
   top: 0;
   left: 0;
   background: rgba(0,0,0,0);
-  border-bottom: 1px solid #cccccc;
   z-index: 100000;
   display: none;
   font-size: 30px;
@@ -24,6 +23,7 @@
   &.active {
     background: #fff;
     color: #000000;
+    border-bottom: 1px solid #cccccc;
     
     a {
       color: #000000;
@@ -47,7 +47,7 @@
     height: 100%;
     line-height: 3;
     opacity: 0;
-    font-weight: bold;
+    opacity: 0;
     transform: translateY(-50px);
     -webkit-transform: translateY(-50px);
     -moz-transform: translateY(-50px);
@@ -78,6 +78,7 @@
       display: inline-block;
       font-size: 15px;
       padding: 12px;
+      font-weight: bold;
     }
     
     li:last-child {

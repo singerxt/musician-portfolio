@@ -78,7 +78,8 @@ keystone.set('nav', {
   'header': 'header',
   'videos': 'videos',
   'listen': 'listen',
-  'soundCloud':  'soundCloud'
+  'soundCloud': 'soundCloud',
+  'footer': 'footer'
 });
 
 // Start Keystone to connect to your database and initialise the web server
