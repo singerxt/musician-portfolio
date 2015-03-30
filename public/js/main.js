@@ -131,6 +131,12 @@
       this.config.video.on('click', function (e) {
         e.preventDefault();
         iframeSrc = $(this).find('a').attr('href');
+        
+        if(window.innerWidth < 1024) {
+          window.open(iframeSrc);
+          return;
+        }
+        
         that.config.iframe.attr('src', iframeSrc);
         that.config.poput.show();
       });
