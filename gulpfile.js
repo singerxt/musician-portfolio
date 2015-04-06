@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     jshintReporter = require('jshint-stylish'),
     watch = require('gulp-watch');
+    browserify = require('gulp-browserify');
 
 /*
  * Create variables for our project paths so we can change in one place
