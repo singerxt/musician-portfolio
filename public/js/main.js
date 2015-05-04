@@ -89,7 +89,6 @@
     },
 
     bindResizeEvent: function () {
-      if(videoID && !('ontouchstart' in window || 'onmsgesturechange' in window)) {}
       window.onresize = this.setHeight.bind(this);
     },
 
