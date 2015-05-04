@@ -83,10 +83,13 @@
     },
 
     setHeight: function () {
-      this.config.header.height(window.innerHeight);
+      if(!('ontouchstart' in window || 'onmsgesturechange' in window)) {
+        this.config.header.height(window.innerHeight);
+      }
     },
 
     bindResizeEvent: function () {
+      if(videoID && !('ontouchstart' in window || 'onmsgesturechange' in window)) {}
       window.onresize = this.setHeight.bind(this);
     },
 
