@@ -3,7 +3,7 @@
 
 (function($) {
   /*
-   * Grettings 
+   * Grettings
    */
 
   console.log('Hello! Do you want website like this? You are lucky this website is completly free checkout my github repo https://github.com/singerxt/musician-portfolio');
@@ -84,7 +84,6 @@
 
     setHeight: function () {
       this.config.header.height(window.innerHeight);
-      this.config.header.css('background', 'initial');
     },
 
     bindResizeEvent: function () {
@@ -92,12 +91,15 @@
     },
 
     runVideo: function () {
-      this.config.header.vide({
-        mp4: 'images/backgroundvideo/kulesza_800.mp4',
-        webm: 'images/backgroundvideo/kulesza_800.webm',
-        //ogv: ''
-        poster: 'images/backgroundvideo/kulesza_800.jpg'
-      });
+      var videoID = this.config.header.data('youtubeid'),
+          backgroundURL = this.config.header.data('bgimage');
+      if(videoID && !('ontouchstart' in window || 'onmsgesturechange' in window)) {
+        this.config.header.tubular({
+          videoId: videoID
+        });
+      } else {
+        this.config.header.css('background-image', 'url(' + backgroundURL + ')');
+      }
     },
 
     config: {
@@ -131,12 +133,12 @@
       this.config.video.on('click', function (e) {
         e.preventDefault();
         iframeSrc = $(this).find('a').attr('href');
-        
+
         if(window.innerWidth < 1024) {
           window.open(iframeSrc);
           return;
         }
-        
+
         that.config.iframe.attr('src', iframeSrc);
         that.config.poput.show();
       });

@@ -18,6 +18,8 @@ exports = module.exports = function(req, res) {
       locals.title = results[0].title;
       locals.subTitle = results[0].subTitle;
       locals.tags = results[0].tags;
+      locals.youtubeID = results[0].youtubeID;
+      locals.bgImage = results[0].bgImage;
       next();
     });
   });
@@ -61,7 +63,7 @@ exports = module.exports = function(req, res) {
       next();
     });
   });
-  
+
   view.on('init', function (next) {
     keystone.list('footer').model.find().exec(function (err,results) {
       if (err || !results.length) {

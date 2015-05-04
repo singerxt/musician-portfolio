@@ -28,3 +28,12 @@ h1 {
   text-transform: uppercase;
   margin: 0;
 }
+
+.portfolio-videos,
+.portfolio-listen,
+.portfolio-soundcloud,
+.portfolio-contact {
+  position: relative;
+  z-index: 100;
+  background: #ebecec;
+}
