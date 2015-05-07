@@ -58,8 +58,6 @@
     }
   };
 
-  navigation.init();
-
   /*
    * Scripts for header
    */
@@ -116,8 +114,6 @@
       this.bindScrollEvent();
     }
   };
-
-  header.init();
 
   /*
    * END scripts header
@@ -286,8 +282,6 @@
     }
   };
 
-  videos.init();
-
   /*
    * SoundCloud configuration
    */
@@ -325,5 +319,9 @@
     }
   };
 
+  videos.init();
+  navigation.init();
   soundCloud.init();
+  header.init();
+
 })(jQuery);
