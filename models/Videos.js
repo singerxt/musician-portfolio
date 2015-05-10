@@ -5,7 +5,9 @@ var keystone = require('keystone'),
  * Header Model
  */
 
-var videos = new keystone.List('videos');
+var videos = new keystone.List('videos', {
+  sortable: true
+});
 
 videos.add({
   title: { type: Types.Text, initial: true, required: true, index: true },
