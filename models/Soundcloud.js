@@ -5,7 +5,9 @@ var keystone = require('keystone'),
  * Header Model
  */
 
-var soundCloud = new keystone.List('soundCloud');
+var soundCloud = new keystone.List('soundCloud', {
+  sortable: true
+});
 
 soundCloud.add({
   title: { type: Types.Text, initial: true, required: true, index: true },
