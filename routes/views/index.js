@@ -29,11 +29,10 @@ exports = module.exports = function(req, res) {
    */
 
   view.on('init', function (next) {
-    keystone.list('videos').model.find().exec(function (err,results) {
+    keystone.list('videos').model.find().sort('sortOrder').exec(function (err,results) {
       if (err || !results.length) {
         return next(err);
       }
-
       locals.videos = results;
       next();
     });
@@ -71,7 +70,6 @@ exports = module.exports = function(req, res) {
       }
 
       locals.footer = results[0];
-      console.log(results[0]);
       next();
     });
   });
